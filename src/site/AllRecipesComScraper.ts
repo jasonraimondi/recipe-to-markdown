@@ -19,7 +19,7 @@ export class AllRecipeScraper extends AbstractRecipeScraper {
     super();
   }
 
-  get title(): string {
+  get recipeTitle(): string {
     return this.cheerio('#recipe-main-content')
       .text()
       .trim();
@@ -84,12 +84,6 @@ export class AllRecipeScraper extends AbstractRecipeScraper {
     );
     const totalTime: TimeInterval = parse(totalTimeInterval);
     return this.timeToString(totalTime);
-  }
-
-  get recipeTitle(): string {
-    return this.cheerio('#recipe-main-content')
-      .text()
-      .trim();
   }
 
   private timeToString(timeInterval: TimeInterval): string {

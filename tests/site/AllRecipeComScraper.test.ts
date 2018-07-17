@@ -20,7 +20,7 @@ describe('AllRecipeScraperTest', () => {
   
   it('Allows null routeParams', async () => {
     expect(allRecipeScraper.url).toBe('https://www.allrecipes.com/recipe/242402');
-    expect(allRecipeScraper.title).toBe('Greek Lemon Chicken and Potatoes');
+    expect(allRecipeScraper.recipeTitle).toBe('Greek Lemon Chicken and Potatoes');
     expect(allRecipeScraper.prepTime).toBe('10 minutes');
     expect(allRecipeScraper.cookTime).toBe('50 minutes');
     expect(allRecipeScraper.totalTime).toBe('1 hour');
