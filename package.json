@@ -7,6 +7,8 @@
   ],
   "author": "Jason Raimondi <jason@raimondi.us>",
   "scripts": {
+    "fetch": "ts-node src/main.ts $ID",
+    "serve": "ts-node src/app.ts",
     "clean": "rm -rf dist/*",
     "test": "jest",
     "build:dev": "npm run clean && webpack --config build/webpack.conf.js",
