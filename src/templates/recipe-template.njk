@@ -1,0 +1,18 @@
+# {{ recipeTitle }}
+
+Link: {{ url }}
+
+{% if prepTime %}Prep Time: {{ prepTime }}{% endif %}
+{% if cookTime %}Cook Time: {{ cookTime }}{% endif %}
+{% if totalTime %}Total Time: {{ totalTime }}{% endif %}
+
+### Ingredients
+{% for title, ingredient in ingredients %}
+{% if ingredient %}- {{ ingredient }}{% endif %}
+{%- endfor %}
+
+### Directions
+{% for direction in directions %}
+{% if direction %}- {{ direction }}{% endif %}
+{%- endfor %}
+
