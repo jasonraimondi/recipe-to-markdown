@@ -8,7 +8,7 @@ export class CheerioScraper implements HtmlScraperInterface {
   async scrape(url: string): Promise<CheerioStatic> {
     try {
       const response = await this.restClient.get(url);
-
+      
       if (response.data) {
         return cheerio.load(response.data);
       }
